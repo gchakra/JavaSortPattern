@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		mysort(args);
+	}
+	
+	public static void mysort(String[] args) {
+		Arrays.sort(args);
+		
+		for (String st:args) {
+			System.out.print(st + "");
+			
+			
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+
+import javax.swing.event.ListSelectionEvent;
+
+import java.util.HashSet;
+
+class RemoveDups {
+	
+	public void myNonDup1(List<Integer> lis) {
+		HashSet<Integer> hs = new LinkedHashSet<Integer>(lis);
+		List<Integer> listWithoutDup = new ArrayList<Integer>(hs);
+		System.out.println("\nThe nondup1 order list is: ");
+		for (int num : listWithoutDup) {
+			System.out.print(num + " ");
+
+		}
+	}
+	
+	public void myNonDup2(List<Integer> lis) {
+		HashSet<Integer> hs = new HashSet<Integer>(lis);
+		List<Integer> listWithoutDup = new ArrayList<Integer>(hs);
+		System.out.println("\nThe nondup2 order list is: ");
+		System.out.println(listWithoutDup.toString())	;
+		
+	}
+
+}

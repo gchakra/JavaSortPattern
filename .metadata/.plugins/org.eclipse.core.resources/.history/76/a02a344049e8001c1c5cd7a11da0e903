@@ -1,0 +1,11 @@
+import java.util.Arrays;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+        int[] arr= {5.-2,23,7,87,-42, 509};
+        
+		SortClass sortClass = new SortClass();
+		sortClass.mysort1(arr);
+	}
+}

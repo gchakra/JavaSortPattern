@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+        int[] arr= {5,-2,23,7,87,-42, 509};
+        
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i : arr) {
+        	list.add(i);
+        }        
+		SortClass sortClass = new SortClass();
+		sortClass.mysortList(list);
+		
+		// Converting primitive integer array to an Integer array
+		Integer[] boxedArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+		sortClass.mysortArr(boxedArray);
+		
+		//Block Casting
+		//OptimizedDiskCache optimizedDiskCache = new OptimizedDiskCache();
+		//Cache cache = (Cache) optimizedDiskCache;
+		
+		MemoryCache memoryCache = new MemoryCache();
+		Cache cache = (Cache) memoryCache;
+		//DiskCache diskCache = (DiskCache) cache;
+	}
+}

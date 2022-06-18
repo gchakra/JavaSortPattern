@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+public class SortClass {
+
+	public void mysort1(String[] args) {
+		Arrays.sort(args);
+
+		for (String st : args) {
+			System.out.print(st + " ");
+
+		}
+	}
+
+}

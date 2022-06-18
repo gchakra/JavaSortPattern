@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+        int[] arr= {5, 0, 3, 1, 2, 3, 0, 0};
+        
+        ArrayList<Integer> aList=new ArrayList<Integer>();        
+        List<Integer> list = (List<Integer>)aList;
+       
+        for (int i : arr) {
+        	list.add(i);
+        }        
+		SortClass sortClass = new SortClass();
+		sortClass.mysortList(list);
+		
+		// Converting primitive integer array to an Integer array
+		Integer[] boxedArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+		sortClass.mysortArr(boxedArray);
+		
+		//Block Casting-Child cast to parent ok
+		//OptimizedDiskCache optimizedDiskCache = new OptimizedDiskCache();
+		//Cache cache = (Cache) optimizedDiskCache;
+		
+		//Child cast to sibling - runtime error
+		//MemoryCache memoryCache = new MemoryCache();
+		//Cache cache = (Cache) memoryCache;
+		//DiskCache diskCache = (DiskCache) cache;
+		
+		//Parent cast to child - runtime error
+		//Cache cache = new Cache();
+		//MemoryCache memoryCache = (MemoryCache) cache;
+		
+		OptimizedDiskCache optimizedDiskCache = new OptimizedDiskCache();
+		Cache cache = (Cache) optimizedDiskCache;
+		DiskCache diskCache = (DiskCache) cache;
+	}
+}
